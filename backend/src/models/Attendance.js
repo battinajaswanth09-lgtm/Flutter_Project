@@ -53,3 +53,4 @@ const AttendanceSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model('Attendance', AttendanceSchema);
+

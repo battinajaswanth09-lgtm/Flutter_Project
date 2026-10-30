@@ -49,3 +49,4 @@ const ExaminationSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model('Examination', ExaminationSchema);
+

@@ -199,3 +199,4 @@ class AdminFacultyScreen extends StatelessWidget {
     );
   }
 }
+

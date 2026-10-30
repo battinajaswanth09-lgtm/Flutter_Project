@@ -193,3 +193,4 @@ class _FacultyAttendanceScreenState extends State<FacultyAttendanceScreen> {
     );
   }
 }
+

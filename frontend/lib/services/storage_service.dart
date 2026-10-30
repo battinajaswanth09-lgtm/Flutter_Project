@@ -43,3 +43,4 @@ class StorageService {
     await prefs.remove(AppConstants.roleKey);
   }
 }
+

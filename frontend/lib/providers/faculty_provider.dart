@@ -77,3 +77,4 @@ class FacultyProvider with ChangeNotifier {
     } catch (_) {}
   }
 }
+

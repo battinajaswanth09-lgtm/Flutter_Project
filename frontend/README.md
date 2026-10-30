@@ -27,3 +27,4 @@ flutter run -d chrome
 flutter build web --release
 ```
 The production bundle will be generated in `build/web/`.
+

@@ -14,3 +14,4 @@ router.post('/', authorize('admin', 'faculty'), createAssignment);
 router.post('/:id/submit', authorize('student'), submitAssignment);
 
 module.exports = router;
+

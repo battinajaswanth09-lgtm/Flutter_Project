@@ -174,3 +174,4 @@ exports.getStudentAttendanceSummary = async (req, res, next) => {
     next(err);
   }
 };
+

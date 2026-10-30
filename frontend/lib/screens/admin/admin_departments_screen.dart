@@ -127,3 +127,4 @@ class AdminDepartmentsScreen extends StatelessWidget {
     );
   }
 }
+

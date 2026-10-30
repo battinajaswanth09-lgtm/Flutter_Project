@@ -71,3 +71,4 @@ exports.deleteDepartment = async (req, res, next) => {
     next(err);
   }
 };
+

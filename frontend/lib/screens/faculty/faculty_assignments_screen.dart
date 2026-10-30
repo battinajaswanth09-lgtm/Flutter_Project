@@ -145,3 +145,4 @@ class FacultyAssignmentsScreen extends StatelessWidget {
     );
   }
 }
+

@@ -16,3 +16,4 @@ router.post('/results', authorize('admin', 'faculty'), submitMarks);
 router.get('/results/student/:studentId', getStudentResults);
 
 module.exports = router;
+

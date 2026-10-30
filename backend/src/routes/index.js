@@ -28,3 +28,4 @@ router.use('/announcements', announcementRoutes);
 router.use('/assignments', assignmentRoutes);
 
 module.exports = router;
+

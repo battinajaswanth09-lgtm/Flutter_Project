@@ -61,3 +61,4 @@ npm start
 - `GET /api/timetables` - Class schedules
 - `GET /api/fees` & `POST /api/fees/:id/pay` - Fees management
 - `GET /api/announcements` - College announcements
+

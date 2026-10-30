@@ -12,3 +12,4 @@ router.post('/', protect, authorize('admin', 'faculty'), createAnnouncement);
 router.delete('/:id', protect, authorize('admin'), deleteAnnouncement);
 
 module.exports = router;
+

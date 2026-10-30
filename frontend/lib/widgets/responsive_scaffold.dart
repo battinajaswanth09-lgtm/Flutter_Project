@@ -525,3 +525,4 @@ class _ResponsiveScaffoldState extends State<ResponsiveScaffold> {
     );
   }
 }
+

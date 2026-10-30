@@ -20,3 +20,4 @@ router.put('/:id', authorize('admin'), updateFaculty);
 router.delete('/:id', authorize('admin'), deleteFaculty);
 
 module.exports = router;
+

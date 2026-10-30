@@ -10,3 +10,4 @@ router.get('/dashboard-stats', getDashboardStats);
 router.get('/reports', getAcademicReports);
 
 module.exports = router;
+

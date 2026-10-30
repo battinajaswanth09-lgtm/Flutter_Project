@@ -9,3 +9,4 @@ router.get('/', getTimetable);
 router.post('/', authorize('admin'), saveTimetable);
 
 module.exports = router;
+

@@ -101,3 +101,4 @@ class AcademicProvider with ChangeNotifier {
     notifyListeners();
   }
 }
+

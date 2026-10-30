@@ -27,3 +27,4 @@ class AppConstants {
   static const String demoStudentEmail = 'student@college.edu';
   static const String demoStudentPassword = 'StudentPassword123!';
 }
+

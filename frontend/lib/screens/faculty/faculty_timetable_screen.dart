@@ -86,3 +86,4 @@ class FacultyTimetableScreen extends StatelessWidget {
     );
   }
 }
+

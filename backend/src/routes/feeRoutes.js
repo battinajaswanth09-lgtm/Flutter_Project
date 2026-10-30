@@ -16,3 +16,4 @@ router.post('/', authorize('admin'), createFee);
 router.post('/:id/pay', payFee);
 
 module.exports = router;
+

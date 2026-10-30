@@ -118,3 +118,4 @@ class PerformanceChartWidget extends StatelessWidget {
     );
   }
 }
+

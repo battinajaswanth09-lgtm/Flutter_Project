@@ -100,3 +100,4 @@ exports.deleteSubject = async (req, res, next) => {
     next(err);
   }
 };
+

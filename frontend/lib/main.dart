@@ -130,3 +130,4 @@ class CollegeManagementApp extends StatelessWidget {
     }
   }
 }
+

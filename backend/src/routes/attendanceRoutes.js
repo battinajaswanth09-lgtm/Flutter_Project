@@ -14,3 +14,4 @@ router.get('/', getAttendance);
 router.get('/student/:studentId', getStudentAttendanceSummary);
 
 module.exports = router;
+

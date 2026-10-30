@@ -18,3 +18,4 @@ router.put('/updatepassword', protect, updatePassword);
 router.post('/forgotpassword', forgotPassword);
 
 module.exports = router;
+

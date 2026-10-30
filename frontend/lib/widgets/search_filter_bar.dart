@@ -133,3 +133,4 @@ class SearchFilterBar extends StatelessWidget {
     );
   }
 }
+
