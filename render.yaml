@@ -15,8 +15,8 @@ services:
         value: production
       - key: PORT
         value: 5000
-      - key: MONGODB_URI
-        sync: false # Set securely in Render Dashboard to your MongoDB Atlas cluster URI
+      - key: USE_FAKE_DB
+        value: "true"
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_EXPIRE

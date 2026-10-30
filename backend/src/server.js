@@ -9,13 +9,28 @@ require('dotenv').config();
 
 const connectDB = require('./config/db');
 const apiRoutes = require('./routes/index');
+const fakeRoutes = require('./routes/fakeRoutes');
 const errorHandler = require('./middleware/errorHandler');
 
 // Initialize express app
 const app = express();
 
-// Connect to MongoDB Database
-connectDB();
+// Determine Database Mode (Fake / In-Memory vs MongoDB Atlas)
+const useFakeDb =
+  process.env.USE_FAKE_DB === 'true' ||
+  !process.env.MONGODB_URI ||
+  process.env.MONGODB_URI.includes('127.0.0.1');
+
+if (useFakeDb) {
+  console.log('----------------------------------------------------');
+  console.log('⚡ [Database] RUNNING IN ZERO-SETUP FAKE DATABASE MODE');
+  console.log('⚡ All APIs, authentication & records are simulated in memory.');
+  console.log('⚡ Perfect for instant free deployment without MongoDB Atlas!');
+  console.log('----------------------------------------------------');
+} else {
+  // Connect to MongoDB Atlas
+  connectDB();
+}
 
 // Security HTTP headers
 app.use(
@@ -64,12 +79,17 @@ app.get('/health', (req, res) => {
   res.status(200).json({
     uptime: process.uptime(),
     status: 'UP',
+    databaseMode: useFakeDb ? 'fake-in-memory-db' : 'mongodb-atlas',
     timestamp: Date.now(),
   });
 });
 
-// Mount API routes
-app.use('/api', apiRoutes);
+// Mount API routes (Fake DB vs MongoDB Atlas)
+if (useFakeDb) {
+  app.use('/api', fakeRoutes);
+} else {
+  app.use('/api', apiRoutes);
+}
 
 // -------------------------------------------------------------
 // All-In-One Free Deployment Support:
