@@ -32,10 +32,15 @@ jobs:
           cd frontend
           flutter pub get
 
+      - name: Analyze Dart code (show all errors)
+        run: |
+          cd frontend
+          flutter analyze --no-fatal-infos 2>&1 || true
+
       - name: Build Flutter Web
         run: |
           cd frontend
-          flutter build web --release --base-href "/${{ github.event.repository.name }}/"
+          flutter build web --release --base-href "/${{ github.event.repository.name }}/" 2>&1
 
       - name: Deploy to GitHub Pages (100% Free Hosting)
         uses: peaceiris/actions-gh-pages@v3
