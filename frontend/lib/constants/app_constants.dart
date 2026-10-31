@@ -5,7 +5,8 @@ class AppConstants {
 
   // API Base URL - Configurable for Render deployment or local development
   // In Flutter web on Render, this points to the hosted Render backend API
-  static const String defaultApiUrl = 'https://college-management-backend.onrender.com/api';
+  // Render backend URL — matches the service name "college-api" in render.yaml
+  static const String defaultApiUrl = 'https://college-api.onrender.com/api';
   static const String localApiUrl = 'http://localhost:5000/api';
 
   // Breakpoints

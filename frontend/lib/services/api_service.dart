@@ -5,7 +5,8 @@ import 'storage_service.dart';
 
 class ApiService {
   // Can be configured at runtime or environment variable
-  static String baseUrl = AppConstants.localApiUrl;
+  // Uses the deployed Render backend by default; falls back gracefully to mock data
+  static String baseUrl = AppConstants.defaultApiUrl;
 
   static Future<Map<String, String>> _getHeaders() async {
     final token = await StorageService.getToken();

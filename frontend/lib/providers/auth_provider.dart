@@ -133,7 +133,7 @@ class AuthProvider with ChangeNotifier {
     } catch (e) {
       // Demo fallback
       _currentUser = UserModel(
-        id: 'new-usr-${Date.now()}',
+        id: 'new-usr-${DateTime.now().millisecondsSinceEpoch}',
         name: name,
         email: email,
         role: role,
